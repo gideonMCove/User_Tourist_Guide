@@ -1,18 +1,18 @@
 const mongoose = require('mongoose')
-const Schema = require('mongoose')
+const { Schema } = require('mongoose')
 
 const Country = new Schema(
     {
-        location: {Type: String, required: true},
+        location: {type: String, required: true},
         topRegions: [
-            {Type: Schema.Types.ObjectId, ref: 'region_id'},
-            // {Type: Schema.Types.ObjectId, ref: 'region_id'},
-            // {Type: Schema.Types.ObjectId, ref: 'region_id'}
+            {type: Schema.Types.ObjectId, ref: 'region_id'},
+            // {type: Schema.Types.ObjectId, ref: 'region_id'},
+            // {type: Schema.Types.ObjectId, ref: 'region_id'}
         ],
-        safetyRating: {Type: String, required: true},
-        travelRating: {Type: Number, min: 1, max: 10, required: true},
-        languages: {Type: String, required: true},
-        currency: {Type: String, required: true},
+        safetyRating: {type: String, required: true},
+        travelRating: {type: Number, min: 1, max: 10, required: true},
+        languages: {type: String, required: true},
+        currency: {type: String, required: true},
 
 
     }, {timestamps: true}

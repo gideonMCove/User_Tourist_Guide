@@ -1,5 +1,5 @@
 const db = require('../db')
-const TSpot = require('../models/tSpot')
+const Spot = require('../models/spot')
 const Region = require('../models/region')
 
 
@@ -7,9 +7,9 @@ const Region = require('../models/region')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    const toronto = await TSpot.find({location: 'Toronto'})
-    const ottawa = await TSpot.find({location: 'Ottawa'})
-    const perth = await TSpot.find({location: 'Perth'})
+    const toronto = await Spot.find({location: 'Toronto'})
+    const ottawa = await Spot.find({location: 'Ottawa'})
+    const perth = await Spot.find({location: 'Perth'})
 
     const regions = [
         {

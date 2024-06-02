@@ -1,5 +1,5 @@
 const db = require('../db')
-const TSpot = require('../models/tSpot')
+const Spot = require('../models/spot')
 const Region = require('../models/region')
 const Country = require('../models/country')
 
@@ -8,7 +8,7 @@ const Country = require('../models/country')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    const ontario = await Region.find({location: "Ontario"})
+    const ontario = await Region.find({location: "Ontario, Canada"})
     const countrys = [
         {
             location: "Canada",
