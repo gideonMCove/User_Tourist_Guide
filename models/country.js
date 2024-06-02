@@ -3,10 +3,11 @@ const Schema = require('mongoose')
 
 const Country = new Schema(
     {
+        location: {Type: String, required: true},
         topRegions: [
             {Type: Schema.Types.ObjectId, ref: 'region_id'},
-            {Type: Schema.Types.ObjectId, ref: 'region_id'},
-            {Type: Schema.Types.ObjectId, ref: 'region_id'}
+            // {Type: Schema.Types.ObjectId, ref: 'region_id'},
+            // {Type: Schema.Types.ObjectId, ref: 'region_id'}
         ],
         safetyRating: {Type: String, required: true},
         travelRating: {Type: Number, min: 1, max: 10, required: true},

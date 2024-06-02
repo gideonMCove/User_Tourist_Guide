@@ -3,6 +3,7 @@ const Schema = require('mongoose')
 
 const Region = new Schema(
     {        
+        location: {Type: String, required: true},
         topTSpots: [
             {Type: Schema.Types.ObjectId, ref: 'tSpot_id'},
             {Type: Schema.Types.ObjectId, ref: 'tSpot_id'},

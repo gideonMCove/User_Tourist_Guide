@@ -7,18 +7,22 @@ const Region = require('../models/region')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    
+    const toronto = await TSpot.find({location: 'Toronto'})
+    const ottawa = await TSpot.find({location: 'Ottawa'})
+    const perth = await TSpot.find({location: 'Perth'})
+
     const regions = [
         {
+            location: "Ontario, Canada",
             topTSpots: [
-                {Type: Schema.Types.ObjectId, ref: 'tSpot_id'},
-                {Type: Schema.Types.ObjectId, ref: 'tSpot_id'},
-                {Type: Schema.Types.ObjectId, ref: 'tSpot_id'}
+                toronto[0]._id,
+                ottawa[0]._id,
+                perth[0]._id
             ],
-            safetyRating: {Type: String, required: true},
-            travelRating: {Type: Number, min: 1, max: 10, required: true},
-            languages: {Type: String, required: true},
-            regionSpecific: {Type: String},
+            safetyRating: "Take Normal Safety Precautions",
+            travelRating: 10,
+            languages: "English",
+            
         }
 
     ]
