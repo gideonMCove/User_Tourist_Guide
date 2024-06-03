@@ -46,6 +46,17 @@ Stretch Goals would be multiple countries, and users can create their own touris
 
 <img src ="./Project2/trelloBoard.PNG" alt="Project Timeline" width=520px>
 
+## Fun Errors Along the Way: 
+
+- TypeError: Invalid schema configuration: `true` is not a valid type at path `required`
+
+    - I wrote ` Type: String`, instead of `type: string`
+
+- TypeError: Schema is not a constructor
+
+    - At the top of my models/spot.js file, I forgot to enclose my `Schema` in brackets like so `{ Schema }`
+    
+
 # Credit:
 
 Created by Gideon Cove
