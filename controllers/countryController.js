@@ -63,7 +63,7 @@ const deleteCountry = async (req,res) => {
 const getCountryByCountryName = async (req, res) => {
     try {
         const searchTerm = req.params.searchTerm
-        const countrys = await Country.find({ item: { $regex: searchTerm, $options: 'i' } })
+        const countrys = await Country.find({ location: { $regex: searchTerm, $options: 'i' } })
         res.json(countrys)
     } catch (error) {
         console.error("Cannot Find Country", error)

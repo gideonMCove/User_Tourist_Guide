@@ -63,7 +63,7 @@ const deleteSpot = async (req,res) => {
 const getSpotBySpotName = async (req, res) => {
     try {
         const searchTerm = req.params.searchTerm
-        const spots = await Spot.find({ item: { $regex: searchTerm, $options: 'i' } })
+        const spots = await Spot.find({ location: { $regex: searchTerm, $options: 'i' } })
         res.json(spots)
     } catch (error) {
         console.error("Cannot Find Spot", error)

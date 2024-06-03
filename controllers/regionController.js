@@ -67,7 +67,7 @@ const deleteRegion = async (req, res) => {
 const getRegionByRegionName = async (req, res) => {
     try {
         const searchTerm = req.params.searchTerm
-        const regions = await Region.find({ item: { $regex: searchTerm, $options: 'i' } })
+        const regions = await Region.find({ location: { $regex: searchTerm, $options: 'i' } })
         res.json(regions)
     } catch (error) {
         console.error("Cannot Find Region", error)

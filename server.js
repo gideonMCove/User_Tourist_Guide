@@ -36,7 +36,7 @@ app.get('/spots', spotController.getAllSpots)
 app.get('/spots/:id', spotController.getSpotById)
 app.post('/spots', spotController.createSpot)
 app.put('/spots/:id', spotController.updateSpot)
-app.delete('spots/:id', spotController.deleteSpot)
+app.delete('/spots/:id', spotController.deleteSpot)
 app.get('/spots/items/:searchTerm', spotController.getSpotBySpotName )
 
 app.get('/regions', regionController.getAllRegions)
@@ -50,7 +50,7 @@ app.get('/countrys', countryController.getAllCountrys)
 app.get('/countrys/:id', countryController.getCountryById)
 app.post('/countrys', countryController.createCountry)
 app.put('/countrys/:id', countryController.updateCountry)
-app.delete('countrys/:id', countryController.deleteCountry)
+app.delete('/countrys/:id', countryController.deleteCountry)
 app.get('/countrys/items/:searchTerm', countryController.getCountryByCountryName )
 
 
