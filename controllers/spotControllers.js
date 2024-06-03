@@ -60,10 +60,24 @@ const deleteSpot = async (req,res) => {
     }
 }
 
+const getSpotBySpotName = async (req, res) => {
+    try {
+        const searchTerm = req.params.searchTerm
+        const spots = await Spot.find({ item: { $regex: searchTerm, $options: 'i' } })
+        res.json(spots)
+    } catch (error) {
+        console.error("Cannot Find Spot", error)
+        return res.status(500).send(error.message)
+    }
+}
+
+
+
 module.exports = {
     getAllSpots,
     getSpotById,
     createSpot,
     updateSpot,
-    deleteSpot
+    deleteSpot,
+    getSpotBySpotName
 }

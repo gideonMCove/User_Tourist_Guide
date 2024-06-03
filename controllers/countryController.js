@@ -60,10 +60,23 @@ const deleteCountry = async (req,res) => {
     }
 }
 
+const getCountryByCountryName = async (req, res) => {
+    try {
+        const searchTerm = req.params.searchTerm
+        const countrys = await Country.find({ item: { $regex: searchTerm, $options: 'i' } })
+        res.json(countrys)
+    } catch (error) {
+        console.error("Cannot Find Country", error)
+        return res.status(500).send(error.message);
+    }
+}
+
+
 module.exports = {
     getAllCountrys,
     getCountryById,
     createCountry,
     updateCountry,
-    deleteCountry
+    deleteCountry,
+    getCountryByCountryName
 }
