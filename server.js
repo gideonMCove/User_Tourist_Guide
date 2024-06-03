@@ -1,21 +1,33 @@
 const express = require('express')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const logger = require('morgan')
+
+const app = express()
+app.use(cors())
+app.use(logger('dev'))
+app.use(bodyParser.json())
+
 const db = require('./db')
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`)
+})
+
+
+
+
 const spotController = require('./controllers/spotController')
 const regionController = require('./controllers/regionController')
 const countryController = require('./controllers/countryController')
 
-// const bodyParser = require('body-parser')
-// const logger = require('morgan')
 
 
-// require() imports and middleware here ^ ///////
 
-const PORT = process.env.PORT || 3001
 
-const app = express()
 
-// app.use(logger('dev'))
-// app.use(bodyParser.json())
 
 
 app.get('/', (req, res) => res.send('This is our landing page!'))
@@ -31,7 +43,7 @@ app.get('/regions', regionController.getAllRegions)
 app.get('/regions/:id', regionController.getRegionById)
 app.post('/regions', regionController.createRegion)
 app.put('/regions/:id', regionController.updateRegion)
-app.delete('regions/:id', regionController.deleteRegion)
+app.delete('/regions/:id', regionController.deleteRegion)
 app.get('/regions/items/:searchTerm', regionController.getRegionByRegionName )
 
 app.get('/countrys', countryController.getAllCountrys)
@@ -42,9 +54,9 @@ app.delete('countrys/:id', countryController.deleteCountry)
 app.get('/countrys/items/:searchTerm', countryController.getCountryByCountryName )
 
 
+app.get('*', (req, res) => res.send('404 page not found'))
 
 
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
-})
+
+

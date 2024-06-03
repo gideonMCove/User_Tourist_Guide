@@ -48,15 +48,19 @@ const updateRegion = async (req,res) => {
     }
 }
 
-const deleteRegion = async (req,res) => {
+const deleteRegion = async (req, res) => {
     try {
-        const { id } = req.params
+        const { id } = req.params;
         const deleted = await Region.findByIdAndDelete(id)
         if (deleted) {
-            return res.status(200).send("Region has been deleted!")
-        }throw new Error("Region not found")       
+            return res.status(200).send("Region deleted");
+        }
+        throw new Error("Region not found and can't be deleted");
     } catch (error) {
-        return res.status(500).send(error.message)
+        if (error.name === 'CastError' && error.kind === 'ObjectId') {
+            return res.status(404).send(`That Region doesn't exist`)
+        }
+        return res.status(500).send(error.message);
     }
 }
 
