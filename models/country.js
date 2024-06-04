@@ -18,3 +18,6 @@ const Country = new Schema(
     }, {timestamps: true}
 )
 module.exports = mongoose.model('countrys', Country)
+
+//add two colours for css styling.
+//add flag to put in circle for css styling
