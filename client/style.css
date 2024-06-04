@@ -1,42 +1,50 @@
-.grid {
-    display: grid;
-    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
-    /* grid-template-columns:minmax(60px, 1fr) minmax(60px, 1fr) minmax(60px, 1fr) minmax(60px, 1fr) minmax(60px, 1fr) minmax(60px, 1fr) minmax(60px, 1fr) minmax(60px, 1fr) minmax(60px, 1fr) minmax(60px, 1fr); */
-    grid-template-rows:1fr 1fr .5fr .5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    /* grid-gap: 1em; */
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    flex-direction: column;
+    width: auto;
 }
-
-/* .headerImage {
-    max-width: 25%;
-    max-height:25%;
-    width: 100%;
+.headerImage img {
+    display: block;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    max-width: 100%;
     height: auto;
-} */
+    border: 1px solid black;       
+}
 
 .navBar {
     overflow:hidden;
     background-color: #F06856;
-    grid-area: 3 / 3 / 4 /8; 
+    border: 3px solid #56def0;
+
+    
+       
 }
 
 .navBar li {
     display: inline;    
-    margin: 0 15px;
+    margin: 0 35px;   
+    
     
 }
 
-
-.navBar a {
-    float: left;
-    display: block;
+.navBar a {    
     color: black;
     background-color: #F06856;
-    text-align: center;
-    
+    text-align: center;   
     
 }
 
 .navBar a:hover {
     opacity: 0.6;
     transition: opacity 0.25s ease-in-out;
+}
+
+.navBar input {
+        
+    margin: 0px 0px 0px 35px;
 }
