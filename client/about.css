@@ -1,0 +1,28 @@
+body {
+    /* display: flex;
+    flex-direction: column; */
+    overflow: scroll;
+    background-color: #FFD8C5;
+    background-image:  url("/pictures/sunset.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profilePic img {
+   --size:150px;
+   --position: -50%;
+
+   width: var(--size);
+   height: var(--size);
+   float: left;
+
+   transform: translate(
+    calc(var(--position) - var(--spacer)),
+    calc(var(--position) - var(--spacer))
+   );
+
+   clip-path: circle(50%);
+   shape-outside: circle(50% at 0 0);
+   shape-margin: 250px;
+}

@@ -1,35 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    background-color: #FFD8C5;
+}
+
 header {
     display: flex;
     position: fixed;
     top: 0;
     left: 0;    
     flex-direction: column;
-    width: auto;
+    width: 100%;
 }
-.headerImage img {
+.headerImage img {    
     display: block;
     font-style: italic;
     background-repeat: no-repeat;
     background-size: cover;    
     max-width: 100%;
+    max-height: 500px;
     height: auto;
-    border: 1px solid black;       
+    border: 1px solid black;
+      
+         
 }
 
 .navBar {
     overflow:hidden;
     background-color: #F06856;
     border: 3px solid #56def0;
+    max-height: 50px;
 
-    
-       
 }
 
 .navBar li {
-    display: inline;    
-    margin: 0 35px;   
-    
-    
+    display: inline;
+    font-size: 16px;    
+    margin: 0 25px;   
+
 }
 
 .navBar a {    
@@ -45,6 +54,12 @@ header {
 }
 
 .navBar input {
-        
-    margin: 0px 0px 0px 35px;
+    float: right;   
+    margin: 0px 25px 0px 65px;
+}
+
+.blurb {
+    display: flex;
+    margin: 35px 0 0 0;
+    color:#140700;
 }
