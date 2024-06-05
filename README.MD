@@ -60,3 +60,13 @@ Stretch Goals would be multiple countries, and users can create their own touris
 # Credit:
 
 Created by Gideon Cove
+
+### Using These Resources
+
+[Kevin Powell](https://www.youtube.com/@KevinPowell) CSS help.
+
+[MDN](https://developer.mozilla.org/index.html) CSS help.
+
+[W3Schools](https://www.w3schools.com/) CSS help.
+
+

@@ -6,6 +6,7 @@
     <title>TouristSpot Homepage</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
   <header>
@@ -15,10 +16,10 @@
     <span class="navBar">
       <ul>
         <li><a href="about.html" target="_blank">About</a></li>
-        <li><a href = "country.html" target="_blank">Browse Countries</a></li>
-        <li><a href = "region.html" target="_blank">Browse Provinces/States</a></li>
-        <li><a href = "spot.html" target="_blank">Browse Tourist Spots</a></li>
-        <input type = "text" placeholder="Search">
+        <li><a id="anchorCountry" href = "country.html" target="_blank">Browse Countries</a></li>
+        <li><a id="anchorRegion" href = "region.html" target="_blank">Browse Provinces/States</a></li>
+        <li><a id="anchorSpot" href = "spot.html" target="_blank">Browse Tourist Spots</a></li>
+        <input id="searchBar" type = "text" placeholder="Search">
       </ul>        
     </span>
     <div class="blurb">
