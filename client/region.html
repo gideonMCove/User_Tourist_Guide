@@ -10,5 +10,22 @@
 </head>
 <body>
     <ul id="listRegion"></ul>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const listRegion = document.getElementById('listRegion')
+            const res = await axios.get(`http://localhost:3001/${regionEndpoint}`)
+            listRegion.innerHTML =''
+            res.data.forEach(data => {
+                const locationRegion = document.createElement('li')
+                locationRegion.classList.add('locationRegion')
+                locationRegion.innerHTML = `
+                <h3><a href="" target="_blank">Name: ${data.location}</a></h3>
+
+                `
+                listRegion.appendChild(locationRegion)
+
+            })
+        })
+    </script>
 </body>
 </html>

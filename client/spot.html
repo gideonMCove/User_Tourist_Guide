@@ -6,8 +6,25 @@
     <title>Spot</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+    <ul id="listSpot"></ul>
+    <script>        
+        document.addEventListener('DOMContentLoaded', async () => {
+            const listSpot = document.getElementById('listSpot')
+            const res = await axios.get(`http://localhost:3001/${spotEndpoint}`)
+            listSpot.innerHTML =''
+            res.data.forEach(data => {
+                const locationSpot = document.createElement('li')
+                locationSpot.classList.add('locationSpot')
+                locationSpot.innerHTML = `
+                <h3><a href="" target="_blank">Location: ${data.location}</a></h3>
+                `
+                listSpot.appendChild(locationSpot)
+            })
+        })
+    </script>
     
 </body>
 </html>

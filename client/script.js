@@ -39,21 +39,21 @@ getRegions()
 //     }
 // )
 
-document.addEventListener('DOMContentLoaded', async () => {
-    const listCountry = document.getElementById('listCountry')
-    const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
-    listCountry.innerHTML =''
-    res.data.forEach(data => {
-        const locationCountry = document.createElement('li')
-        locationCountry.classList.add('locationCountry')
-        locationCountry.innerHTML = `
-        <h3><a href="" target="_blank">Name: ${data.location}</a></h3>
+// document.addEventListener('DOMContentLoaded', async () => {
+//     const listCountry = document.getElementById('listCountry')
+//     const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
+//     listCountry.innerHTML =''
+//     res.data.forEach(data => {
+//         const locationCountry = document.createElement('li')
+//         locationCountry.classList.add('locationCountry')
+//         locationCountry.innerHTML = `
+//         <h3><a href="" target="_blank">Name: ${data.location}</a></h3>
 
-        `
-        listCountry.appendChild(locationCountry)
+//         `
+//         listCountry.appendChild(locationCountry)
 
-    })
-})
+//     })
+// })
 
 // document.addEventListener('DOMContentLoaded', async () => {
 //     const listRegion = document.getElementById('listRegion')
