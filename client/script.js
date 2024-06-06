@@ -1,21 +1,3 @@
-// filter
-// const getAccessoriesByColor = async (req, res) => {
-//     try {
-//         const color = req.params.color
-//         const accessories = await Accessory.find({ color: { $regex: new RegExp(color, "i") } })
-//         res.json(accessories)
-//     } catch (error) {
-//         console.error("Error fetching accessories by color:", error)
-//         res.status(500).json({ error: error.message })
-//     }
-// }
-
-
-
-
-// const countryEndpoint = `http://localhost:3001/countrys`
-// const regionEndpoint = 'http://localhost:3001/region'
-// const spotEndpoint = 'http://localhost:3001/spot'
 
 const countryEndpoint = `countrys`
 const regionEndpoint = 'http://localhost:3001/region'
@@ -46,10 +28,28 @@ button.addEventListener('click', async () => {
             document.getElementById('location').innerHTML = locations
         }
         setTestLocation()
-        // let getLocationTest = res.data.location
-        // document.getElementById('location').innerHTML = getLocationTest
+        
 
     }
+)
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const listCountry = document.getElementById('listCountry')
+    const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
+    listCountry.innerHTML =''
+    res.data.forEach(data => {
+        const locationCountry = document.createElement('li')
+        locationCountry.classList.add('locationCountry')
+        locationCountry.innerHTML = `
+        <h3><a href="" target="_blank">Name: ${data.location}</a></h3>
+
+        `
+        listCountry.appendChild(locationCountry)
+
+    })
+})
+
+
     // let data = country.data
     
     // console.log(res.data)
@@ -104,7 +104,28 @@ button.addEventListener('click', async () => {
 
     
    
+// filter
+// const getAccessoriesByColor = async (req, res) => {
+//     try {
+//         const color = req.params.color
+//         const accessories = await Accessory.find({ color: { $regex: new RegExp(color, "i") } })
+//         res.json(accessories)
+//     } catch (error) {
+//         console.error("Error fetching accessories by color:", error)
+//         res.status(500).json({ error: error.message })
+//     }
+// }
 
+// const country = require("../models/country")
+
+
+
+
+// const countryEndpoint = `http://localhost:3001/countrys`
+// const regionEndpoint = 'http://localhost:3001/region'
+// const spotEndpoint = 'http://localhost:3001/spot'
     
 
-)
+
+
+
