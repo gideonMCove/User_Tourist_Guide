@@ -20,6 +20,7 @@ app.listen(PORT, () => {
 const spotController = require('./controllers/spotController')
 const regionController = require('./controllers/regionController')
 const countryController = require('./controllers/countryController')
+const searchController = require('./controllers/searchController')
 
 
 app.get('/', (req, res) => res.send('This is our landing page!'))
@@ -29,21 +30,23 @@ app.get('/spots/:id', spotController.getSpotById)
 app.post('/spots', spotController.createSpot)
 app.put('/spots/:id', spotController.updateSpot)
 app.delete('/spots/:id', spotController.deleteSpot)
-app.get('/spots/search/:searchTerm', spotController.getSpotBySpotName )
+// app.get('/location/search/:searchTerm', spotController.getSpotBySpotName )
 
 app.get('/regions', regionController.getAllRegions)
 app.get('/regions/:id', regionController.getRegionById)
 app.post('/regions', regionController.createRegion)
 app.put('/regions/:id', regionController.updateRegion)
 app.delete('/regions/:id', regionController.deleteRegion)
-app.get('/regions/search/:searchTerm', regionController.getRegionByRegionName )
+// app.get('/location/search/:searchTerm', regionController.getRegionByRegionName )
 
 app.get('/countrys', countryController.getAllCountrys)
 app.get('/countrys/:id', countryController.getCountryById)
 app.post('/countrys', countryController.createCountry)
 app.put('/countrys/:id', countryController.updateCountry)
 app.delete('/countrys/:id', countryController.deleteCountry)
-app.get('/countrys/search/:searchTerm', countryController.getCountryByCountryName )
+// app.get('/location/search/:searchTerm', countryController.getCountryByCountryName )
+
+app.get('/location/search/:searchTerm', searchController.searchTourism)
 
 
 app.get('*', (req, res) => res.send('404 page not found'))

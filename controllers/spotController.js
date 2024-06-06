@@ -1,5 +1,6 @@
 const Spot = require('../models/spot')
 
+
 const getAllSpots = async (req, res) => {
     try {
         const spots = await Spot.find()

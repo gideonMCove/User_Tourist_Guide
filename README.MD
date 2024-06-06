@@ -55,6 +55,8 @@ Stretch Goals would be multiple countries, and users can create their own touris
 - TypeError: Schema is not a constructor
 
     - At the top of my models/spot.js file, I forgot to enclose my `Schema` in brackets like so `{ Schema }`
+
+- code: 'ERR_HTTP_HEADERS_SENT'
     
 
 # Credit:
