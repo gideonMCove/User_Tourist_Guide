@@ -1,7 +1,7 @@
 
-const countryEndpoint = `countrys`
-const regionEndpoint = 'http://localhost:3001/region'
-const spotEndpoint = 'http://localhost:3001/spot'
+// const countryEndpoint = `countrys`
+const regionEndpoint = 'regions'
+const spotEndpoint = 'spots'
 const locationTest = document.querySelector('#location')
 
 const searchBar = document.getElementById('searchBar')
@@ -9,7 +9,7 @@ const anchorCountry = document.getElementById('anchorCountry')
 const anchorRegion = document.getElementById('anchorRegion')
 const anchorSpot = document.getElementById('anchorSpot')
 const topImage = document.getElementById('topImage')
-const button = document.getElementById('test')
+// const button = document.getElementById('test')
 
 const getCountries = async () => {
     const countrys = await axios.get(`http://localhost:3001/countrys`)
@@ -17,21 +17,27 @@ const getCountries = async () => {
 }
 getCountries()
 
+const getRegions = async () => {
+    const regions = await axios.get(`http://localhost:3001/regions`)
+    console.log(regions.data.message)
+}
+getRegions()
 
 
-button.addEventListener('click', async () => {
-    const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
+
+// button.addEventListener('click', async () => {
+//     const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
 
     
-    function setTestLocation()  {        
-            locations = res.data[0].location
-            document.getElementById('location').innerHTML = locations
-        }
-        setTestLocation()
+//     function setTestLocation()  {        
+//             locations = res.data[0].location
+//             document.getElementById('location').innerHTML = locations
+//         }
+//         setTestLocation()
         
 
-    }
-)
+//     }
+// )
 
 document.addEventListener('DOMContentLoaded', async () => {
     const listCountry = document.getElementById('listCountry')
@@ -48,6 +54,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     })
 })
+
+// document.addEventListener('DOMContentLoaded', async () => {
+//     const listRegion = document.getElementById('listRegion')
+//     const res = await axios.get(`http://localhost:3001/${regionEndpoint}`)
+//     listRegion.innerHTML =''
+//     res.data.forEach(data => {
+//         const locationRegion = document.createElement('li')
+//         locationRegion.classList.add('locationRegion')
+//         locationRegion.innerHTML = `
+//         <h3><a href="" target="_blank">Name: ${data.location}</a></h3>
+
+//         `
+//         listRegion.appendChild(locationRegion)
+
+//     })
+// })
+
+
+
+
+
 
 
     // let data = country.data
