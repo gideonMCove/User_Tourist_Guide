@@ -4,12 +4,14 @@ const regionEndpoint = 'regions'
 const spotEndpoint = 'spots'
 const locationTest = document.querySelector('#location')
 
-const searchBar = document.getElementById('searchBar')
+// const searchBar = document.getElementById('searchBar')
 const anchorCountry = document.getElementById('anchorCountry')
 const anchorRegion = document.getElementById('anchorRegion')
 const anchorSpot = document.getElementById('anchorSpot')
 const topImage = document.getElementById('topImage')
-// const button = document.getElementById('test')
+
+
+
 
 const getCountries = async () => {
     const countrys = await axios.get(`http://localhost:3001/countrys`)
@@ -22,6 +24,32 @@ const getRegions = async () => {
     console.log(regions.data.message)
 }
 getRegions()
+
+// searchBar.addEventListener("keypress", function(event) {
+//     if (event.key ==="Enter") {
+//         const searchTourism = async (req, res) => {
+
+//             try {
+//                 const searchTerm = req.params.searchTerm
+        
+//                 let search = await Spot.find({ location: { $regex: searchTerm, $options: 'i'}})
+        
+//                 if (search.length === 0) {
+//                     search = await Region.find({ location: { $regex: searchTerm, $options: 'i'}})
+//                 }
+        
+//                 if (search.length === 0) {
+//                     search = await Country.find({ location: { $regex: searchTerm, $options: 'i'}})
+//                 }
+        
+//                 res.json(search);
+//             } catch (error) {
+//                 return res.status(500).send(error.message)
+//             }
+//         }
+
+//     }
+// })
 
 
 

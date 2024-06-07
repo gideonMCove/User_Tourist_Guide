@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: scroll;
-    background-color: #FFD8C5;
+    background-color: #ffdd95;
 }
 
 header {
@@ -28,8 +28,8 @@ header {
 
 .navBar {
     overflow:hidden;
-    background-color: #F06856;
-    border: 3px solid #56def0;
+    background-color: #CBAC66;
+    border: 3px solid #75AB85;
     max-height: 50px;
 
 }
@@ -43,7 +43,7 @@ header {
 
 .navBar a {    
     color: black;
-    background-color: #F06856;
+    /* background-color: #F06856; */
     text-align: center;   
     
 }
