@@ -31,7 +31,16 @@ header {
     background-color: #CBAC66;
     border: 3px solid #75AB85;
     max-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+}
+
+.anchors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .navBar li {
@@ -42,6 +51,8 @@ header {
 }
 
 .navBar a {    
+    
+    /* padding: 0 25px; */
     color: black;
     /* background-color: #F06856; */
     text-align: center;   
@@ -58,8 +69,10 @@ header {
     margin: 0px 25px 0px 65px;
 }
 
-.blurb {
-    display: flex;
-    margin: 35px 0 0 0;
-    color:#140700;
+a:hover {
+    color: black;
+    text-align: center;
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out;
+
 }

@@ -10,22 +10,22 @@
 </head>
 <body>
     <ul id="listCountry"></ul>
-    <button id="test">click me</button>
+    <!-- <button id="test">click me</button> -->
     <script>
-        const button = document.getElementById('test')
+    //     const button = document.getElementById('test')
         const countryEndpoint = `countrys`
-        button.addEventListener('click', async () => {
-            const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
+    //     button.addEventListener('click', async () => {
+    //         const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
 
     
-    function setTestLocation()  {        
-            locations = res.data[0].location
-            document.getElementById('location').innerHTML = locations
-        }
-        setTestLocation()
+    // function setTestLocation()  {        
+    //         locations = res.data[0].location
+    //         document.getElementById('location').innerHTML = locations
+    //     }
+    //     setTestLocation()
         
 
-    })
+    // })
     document.addEventListener('DOMContentLoaded', async () => {
         const listCountry = document.getElementById('listCountry')
         const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
@@ -35,6 +35,10 @@
             locationCountry.classList.add('locationCountry')
             locationCountry.innerHTML = `
             <h3><a href="" target="_blank">Name: ${data.location}</a></h3>
+            <h5>Provinces: <br />
+                <p> ${data.topRegions[0]} <br />
+                
+
 
             `
             listCountry.appendChild(locationCountry)
