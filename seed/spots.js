@@ -2,7 +2,7 @@ const db = require('../db')
 const Spot = require('../models/spot')
 
 
-// Connect to the database
+
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
@@ -55,9 +55,7 @@ const main = async () => {
                     rating: 10,
                     description: `Canada's most iconic building, fitted with observational decks and a restaurant.`,
                     image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/33/6d/3e.jpg",
-                    // seasonal: [{
-                    //     isSeasonal: false,                       
-                    //      }]
+                    
                 },
                 {
                     name: "Toronto Islands",
@@ -66,10 +64,7 @@ const main = async () => {
                     rating: 9,
                     description: "An island chain off the coast of Toronto, where people can enjoy amusement parks, beaches, and nature in general",
                     image: "https://media.cntraveler.com/photos/5b2c068ff3db9f70f0179fe8/16:9/w_2240,c_limit/Toronto-Islands__GettyImages-885350470.jpg",
-                    // seasonal: [{
-                    //     isSeasonal: true,
-                    //     whatSeason: "Summer, Spring and Autumn preferable"
-                    //      }]
+                    
                 },
                 {
                     name: "Royal Ontario Museum",
@@ -78,10 +73,7 @@ const main = async () => {
                     rating: 10,
                     description: "One of the most impressive museums in Canada. Something in there for almost everyone.",
                     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Royal_Ontario_Museum_in_Fall_2021.jpg/1200px-Royal_Ontario_Museum_in_Fall_2021.jpg",
-                //     seasonal: [{
-                //         isSeasonal: false,
-                        
-                //          }]
+                
                 },
                 
             ],
@@ -136,9 +128,7 @@ const main = async () => {
                     rating: 8,
                     description: `Admire the architecture and learn about the capitals history`,
                     image: "https://www.vanbynen.ca/wp-content/uploads/2022/09/Parliment-Hill-Ottawa.jpg",
-                    // seasonal: [{
-                    //     isSeasonal: false,                       
-                    //      }]
+                    
                 },
                 {
                     name: "ByWard Market",
@@ -147,10 +137,7 @@ const main = async () => {
                     rating: 10,
                     description: "Enjoy a bite to eat as you browse farmers market stalls and enjoy tourist trap shops",
                     image: "https://facts.net/wp-content/uploads/2023/09/15-captivating-facts-about-byward-market-ottawa-1694536818.jpg",
-                    // seasonal: [{
-                    //     isSeasonal: false,
-                        
-                    //      }]
+                    
                 },
                 {
                     name: "Rideau Canal Skateway",
@@ -159,11 +146,7 @@ const main = async () => {
                     rating: 10,
                     description: "Skate for kilometers on end while enjoying all the market stands on the canal!.",
                     image: "https://images.squarespace-cdn.com/content/v1/5e77f666d1740b5126214300/c2a73703-e276-4fd4-8389-0d6479b3f428/_DSC6746-1low+res.jpg",
-                    // seasonal: [{
-                    //     isSeasonal: true,
-                    //     whatSeason: "Winter only"
-                        
-                    //      }]
+                    
                 },
                 
             ],
@@ -218,9 +201,7 @@ const main = async () => {
                     rating: 8,
                     description: `Enjoy a walk in the park and admire the winding Tay River`,
                     image: "https://www.beautifulperth.com/stewartparkperth.jpg",
-                    // seasonal: [{
-                    //     isSeasonal: false,                       
-                    //      }]
+                    
                 },
                 {
                     name: "Perth Museum",
@@ -229,10 +210,7 @@ const main = async () => {
                     rating: 8,
                     description: "Enjoy a trip in the past to this 19-century stone mansion.",
                     image: "https://image.wmsm.co/6380a5c189aee/perth-museum-1.webp?quality=80&width=1280",
-                    // seasonal: [{
-                    //     isSeasonal: false,
-                        
-                    //      }]
+                    
                 },
                 {
                     name: "Laking!",   
@@ -241,11 +219,7 @@ const main = async () => {
                     rating: 10,
                     description: "Enjoy the many lakes of the area by swimming, fishing, or just relaxing by the water!",
                     image: "https://ottawa.ctvnews.ca/content/dam/ctvnews/en/images/2024/5/21/fatal-long-weekend-boat-crash-on-bobs-lake-1-6895522.jpg",
-                    // seasonal: [{
-                    //     isSeasonal: false,
-                        
-                        
-                    //      }]
+                    
                 },
                 
             ],

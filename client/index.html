@@ -19,7 +19,7 @@
         <li><a id="anchorCountry" href = "country.html" target="_blank">Browse Countries</a></li>
         <li><a id="anchorRegion" href = "region.html" target="_blank">Browse Provinces/States</a></li>
         <li><a id="anchorSpot" href = "spot.html" target="_blank">Browse Tourist Spots</a></li>
-        <!-- <input id="searchBar" type = "text" placeholder="Search" value=""> -->
+       
         </div>
       </ul>        
     </span>
@@ -28,71 +28,4 @@
       <ul id="searchResultList"></ul>
     </div>
     <script>
-      // const searchBar = document.querySelector('#searchBar')
-      // const searchResultList = document.getElementById('searchResultList')
-
-      // searchBar.addEventListener("keypress", async(event) => {
-      //   console.log(event.key)
-      //   if (event.key === "Enter") { 
-
-
-      //   }
-      // })
-          // console.log('read')
-          // const searchBarValue = searchBar.value 
-          // console.log(searchBarValue)
-
-          // const searchTourism = async (req, res, ) => {
-          //   console.log('running')
-          //   searchTerm = await axios.get(`http://localhost:3001/location/search/${searchBarValue}`)
-          //   searchResultList.innerHTML =''
-            
-
-            // try {
-                // const searchTerm = req.params.searchTerm
-                // console.log(searchTerm)
-                // let search = await Spot.find({ location: { $regex: searchTerm, $options: 'i'}})
-                // if (search.length === 0) {
-                //     search = await Region.find({ location: { $regex: searchTerm, $options: 'i'}})
-                // }
-                // if (search.length === 0) {
-                //     search = await Country.find({ location: { $regex: searchTerm, $options: 'i'}})
-                // }
-                // console.log(res.data)
-                // res.data.forEach(data => {
-                //   const searchLocation = document.createElement('li')
-                //   searchLocation.classList.add('searchLocation')
-                //   searchLocation.innerHTML = `
-                //   <h3><a href="" target="_blank">Name: ${data.location}</a></h3>
-                //   `
-                //   searchResultList.appendChild(searchLocation)
-                //   })
-            // } catch (error) {
-            //     return res.status(500).send(error.message)
-          //   }            
-          // }
-      //     searchTourism()
-      //   }
-      // })
      
-    </script>
-  </header> 
-  
-</body>
-</html>
-
-<!-- 
-<script>
-    function switchLocation(counter) {
-      if (counter == 0) {
-        counter = 1;
-        setTimeout(function() {
-          switchLocation(counter);
-        }, 200);
-      } else {
-        window.location = "page.html";
-      }
-    }
-</script> -->
-
-<!-- <button id="group1" onclick="switchLocation(0)"></button> -->

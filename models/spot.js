@@ -50,10 +50,7 @@ const Spot = new Schema (
                 rating: {type: Number, min: 1, max: 10, required: true},
                 description: {type: String, required: true},
                 image: {type: String, required: true},
-                // seasonal: [{
-                //     isSeasonal: {type: Boolean},
-                //     whatSeason: { type: String}
-                //      }]
+               
             },
             {
                 name: {type: String, required: true},
@@ -62,10 +59,7 @@ const Spot = new Schema (
                 rating: {type: Number, min: 1, max: 10, required: true},
                 description: {type: String, required: true},
                 image: {type: String, required: true},
-                // seasonal: [{
-                //     isSeasonal: {type: Boolean},
-                //     whatSeason: { type: String}
-                //      }]
+              
             },
             {
                 name: {type: String, required: true},
@@ -74,10 +68,7 @@ const Spot = new Schema (
                 rating: {type: Number, min: 1, max: 10, required: true},
                 description: {type: String, required: true},
                 image: {type: String, required: true},
-            //     seasonal: [{
-            //         isSeasonal: {type: Boolean},
-            //         whatSeason: { type: String}
-            //          }]
+           
             },
             
         ],
@@ -90,13 +81,3 @@ const Spot = new Schema (
 module.exports = mongoose.model('spots', Spot)
 
 
-// //const resetCollections = async () => {
-//     try {
-//         await Brand.deleteMany({});
-//         await Bicycle.deleteMany({});
-//         await Bell.deleteMany({});
-//         console.log('All collection reset');
-//     } catch (error) {
-//         console.error('Error resetting collections:', error);
-//     }
-// }; call at begging of main

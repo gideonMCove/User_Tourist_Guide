@@ -10,22 +10,11 @@
 </head>
 <body>
     <ul id="listCountry"></ul>
-    <!-- <button id="test">click me</button> -->
-    <script>
-    //     const button = document.getElementById('test')
-        const countryEndpoint = `countrys`
-    //     button.addEventListener('click', async () => {
-    //         const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)
-
     
-    // function setTestLocation()  {        
-    //         locations = res.data[0].location
-    //         document.getElementById('location').innerHTML = locations
-    //     }
-    //     setTestLocation()
-        
-
-    // })
+    <script>
+   
+        const countryEndpoint = `countrys`
+    
     document.addEventListener('DOMContentLoaded', async () => {
         const listCountry = document.getElementById('listCountry')
         const res = await axios.get(`http://localhost:3001/${countryEndpoint}`)

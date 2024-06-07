@@ -6,8 +6,7 @@ const Country = new Schema(
         location: {type: String, required: true},
         topRegions: [
             {type: Schema.Types.ObjectId, ref: 'region_id'},
-            // {type: Schema.Types.ObjectId, ref: 'region_id'},
-            // {type: Schema.Types.ObjectId, ref: 'region_id'}
+            
         ],
         safetyRating: {type: String, required: true},
         travelRating: {type: Number, min: 1, max: 10, required: true},
@@ -19,5 +18,3 @@ const Country = new Schema(
 )
 module.exports = mongoose.model('countrys', Country)
 
-//add two colours for css styling.
-//add flag to put in circle for css styling

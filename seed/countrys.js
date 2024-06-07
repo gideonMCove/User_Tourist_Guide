@@ -4,7 +4,7 @@ const Region = require('../models/region')
 const Country = require('../models/country')
 
 
-// Connect to the database
+
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
@@ -14,8 +14,7 @@ const main = async () => {
             location: "Canada",
             topRegions: [
               ontario[0]._id,
-                // {Type: Schema.Types.ObjectId, ref: 'region_id'},
-                // {Type: Schema.Types.ObjectId, ref: 'region_id'}
+               
             ],
             safetyRating: "Take normal security precautions",
             travelRating: 9,
