@@ -34,11 +34,11 @@
             const locationCountry = document.createElement('li')
             locationCountry.classList.add('locationCountry')
             locationCountry.innerHTML = `
-            <h3><a href="" target="_blank">Name: ${data.location}</a></h3>
+            <h3><a href=await axios.get("http://localhost:3001/regions/${data.topRegions[0]})" target="_blank">Name: ${data.location}</a></h3>
             <p> ${data.safetyRating} <br />
-            <p> ${data.travelRating} <br />
-            <p> ${data.languages} <br />
-            <p> ${data.currency} <br />
+            <p> Rating: ${data.travelRating}/10 <br />
+            <p> Languages: ${data.languages} <br />
+            <p> Currency: ${data.currency} <br />
                 
 
 

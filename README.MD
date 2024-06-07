@@ -46,17 +46,23 @@ Stretch Goals would be multiple countries, and users can create their own touris
 
 <img src ="./pictures/trelloBoard.PNG" alt="Project Timeline" width=520px>
 
-## Fun Errors Along the Way: 
+## Icebox: 
 
-- TypeError: Invalid schema configuration: `true` is not a valid type at path `required`
+- Front end CRUD
 
-    - I wrote ` Type: String`, instead of `type: string`
+    - Users would be able to make their own entries into the blog site. 
 
-- TypeError: Schema is not a constructor
+- Loading Animations
 
-    - At the top of my models/spot.js file, I forgot to enclose my `Schema` in brackets like so `{ Schema }`
+    - When Swapping betwen pages, an loading animation would play
 
-- code: 'ERR_HTTP_HEADERS_SENT'
+- Voting
+
+    - Users would be able to vote on posts on the site, and then filter by highest to lowest rating and vice versa.
+
+- Home and Back Button Functionallity
+
+    - Users can more easily navigate the HTML pages this way
     
 
 # Credit:
